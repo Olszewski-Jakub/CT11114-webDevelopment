@@ -8,20 +8,23 @@
         var biggest = 0;
         var smallest = 9999999;
         var allNums = [];
+        var sum = 0;
         for (var i = 0; i < 20; i++) {
           var num = Math.floor(Math.random() * 1000);
           allNums[i] = num;
           if (num > biggest) biggest = num;
           if (num < smallest) smallest = num;
+          sum += num;
         }
         var res = "Of 20 random numbers, the biggest was" + biggest;
-        var sum = smallest + biggest;
+
         // display the result
         var p = document.getElementById("myParagraph");
         var p_biggest = document.getElementById("biggestP");
         var p_smallest = document.getElementById("smallestP");
         var p_sum = document.getElementById("sumP");
         var p_all20 = document.getElementById("all20P");
+
         p.innerHTML = res;
         p_biggest.innerHTML = biggest;
         p_smallest.innerHTML = smallest;
